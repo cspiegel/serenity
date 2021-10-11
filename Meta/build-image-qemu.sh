@@ -30,6 +30,8 @@ else
     : "${SUDO_UID:=0}" "${SUDO_GID:=0}"
 fi
 
+export PATH=$PATH:/sbin
+
 # Prepend the toolchain qemu directory so we pick up QEMU from there
 PATH="$SCRIPT_DIR/../Toolchain/Local/qemu/bin:$PATH"
 

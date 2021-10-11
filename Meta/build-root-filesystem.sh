@@ -48,7 +48,7 @@ fi
 # If umask was 027 or similar when the repo was cloned,
 # file permissions in Base/ are too restrictive. Restore
 # the permissions needed in the image.
-chmod -R g+rX,o+rX "$SERENITY_SOURCE_DIR"/Base/* mnt/
+chmod -R g+rX,o+rX "$SERENITY_SOURCE_DIR"/Base/* mnt/ || true
 
 chmod 660 mnt/etc/WindowServer.ini
 chown $window_uid:$window_gid mnt/etc/WindowServer.ini
