@@ -3,6 +3,8 @@ set -e
 
 SCRIPT_DIR="$(dirname "${0}")"
 
+export PATH=$PATH:/sbin
+
 # Prepend the QEMU and e2fsprogs toolchain directories so we pick up their tools from there
 PATH="$SCRIPT_DIR/../Toolchain/Local/qemu/bin:$PATH"
 PATH="$SCRIPT_DIR/../Toolchain/Local/e2fsprogs/bin:$PATH"
